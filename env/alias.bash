@@ -1,12 +1,19 @@
 
+
+
+f(){
+cat ~/env/* | grep -w $1
+}
+
 alias csub='cd /Users/vssrivastava/Work/Code/sublime'
 alias cvc='cd /Users/vssrivastava/Work/Code/vscode'
 alias cleanupDS="find . -type f -name '*.DS_Store' -ls -delete"
 alias finderShowHidden='defaults write com.apple.finder ShowAllFiles TRUE'
 alias finderHideHidden='defaults write com.apple.finder ShowAllFiles FALSE'
 
+alias ssh='ssh -o StrictHostKeyChecking=no'
 alias findport='netstat -vanp tcp | grep'
-alias myip='curl ip.appspot.com '                    # myip:         Public facing IP Address
+alias myip='echo `curl -s https://ifconfig.me/`'                  # myip:         Public facing IP Address
 alias netCons='lsof -i'                             # netCons:      Show all open TCP/IP sockets
 alias flushDNS='dscacheutil -flushcache'            # flushDNS:     Flush out the DNS Cache
 alias lsock='sudo /usr/sbin/lsof -i -P'             # lsock:        Display open sockets
